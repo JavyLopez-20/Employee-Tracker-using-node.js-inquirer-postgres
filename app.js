@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const db = require('./db/data.js');
-
+//AI assisted me with this async function
 async function deleteDepartment() {
     const departments = await db.getAllDepartments();
     const choices = departments.map(dept => ({ name: dept.name, value: dept.id }));
@@ -26,7 +26,7 @@ async function deleteDepartment() {
     await db.deleteRole(roleId);
     console.log('Role deleted successfully.');
   }
-  
+  //AI assisted me with this async function
   async function deleteEmployee() {
     const employees = await db.getAllEmployees();
     const choices = employees.map(emp => ({ name: `${emp.first_name} ${emp.last_name}`, value: emp.id }));

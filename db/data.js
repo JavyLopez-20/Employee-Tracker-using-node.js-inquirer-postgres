@@ -11,7 +11,7 @@ class Database {
       password: process.env.DB_PASSWORD,
     });
   }
-
+//AI assisted me with this async function
   async testConnection() {
     try {
       const res = await this.pool.query('SELECT NOW()');
@@ -60,6 +60,7 @@ class Database {
         const res = await pool.query(query, [managerId]);
         return res.rows;
       }
+      //AI assisted me with this async function
       async getEmployeesByDepartment(departmentId) {
         const query = `
           SELECT e.id, e.first_name, e.last_name, r.title, d.name AS department
